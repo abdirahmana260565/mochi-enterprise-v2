@@ -1,0 +1,4 @@
+import { AppShell } from "../../components/AppShell";
+export default function Settings(){return <AppShell title="Settings" subtitle="Configure your Mochi workspace">
+ <div className="settings"><section className="panel"><h2>Workspace</h2><label>Workspace name<input value="Acme Corp" readOnly/></label><label>Workspace URL<input value="acme.mochi.app" readOnly/></label><button className="primary">Save changes</button></section><section className="panel"><h2>Security</h2>{["Two-factor authentication","Session protection","Login notifications"].map((x,i)=><div className="toggle" key={x}><span><b>{x}</b><small>{i===0?"Require 2FA for all workspace members":"Protect workspace activity"}</small></span><i className="switch on"/></div>)}</section></div>
+ </AppShell>}
