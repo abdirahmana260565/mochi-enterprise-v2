@@ -1,3 +1,229 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --bg-black: #09090b;
+  --card-bg: #121215;
+  --border-color: #27272a;
+  --accent-lime: #d4ff33;
+  --text-muted: #a1a1aa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--accent-lime);
+  color: #000;
+  font-weight: 800;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.btn-signin {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background-color: #18181b;
+  border: 1px solid var(--border-color);
+  color: #e4e4e7;
+  transition: all 0.2s;
+}
+
+.btn-signin:hover {
+  background-color: #27272a;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 64px 0 80px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #18181b;
+  border: 1px solid var(--border-color);
+  font-size: 11px;
+  color: #a1a1aa;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-lime);
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.btn-primary {
+  background-color: var(--accent-lime);
+  color: #000;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #18181b;
+  border: 1px solid var(--border-color);
+  color: #e4e4e7;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+/* Preview Card */
+.preview-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-value {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.metric-growth {
+  color: var(--accent-lime);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Grid Architecture */
+.grid-section {
+  padding: 80px 0;
+  border-top: 1px solid #18181b;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.arch-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.arch-num {
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.arch-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.arch-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
