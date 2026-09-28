@@ -12,9 +12,9 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "next": "15.5.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "next": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "lucide-react": "^0.468.0",
     "@prisma/client": "^5.22.0"
   },
